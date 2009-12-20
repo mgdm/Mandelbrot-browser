@@ -1,0 +1,4 @@
+#define MAXITERS 10240
+#define COLOURS 256
+#define NUMTHREADS 2
+
