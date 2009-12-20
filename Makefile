@@ -4,4 +4,4 @@ GTK_CFLAGS=
 cli:
 	gcc $(CFLAGS) -o mandel colour.c  io.c  main.c cli.c mandelbrot.c -lpng -lpthread
 gui:
-	gcc $(CFLAGS) `pkg-config --cflags gtk+-2.0` -o mandel colour.c  io.c  main.c gui.c mandelbrot.c -lpng -lpthread -lgtk
+	gcc $(CFLAGS) -export-dynamic `pkg-config --libs --cflags gtk+-2.0 gmodule-export-2.0` -o gui_mandel colour.c  io.c  main.c gui.c mandelbrot.c -lpng -lpthread  
