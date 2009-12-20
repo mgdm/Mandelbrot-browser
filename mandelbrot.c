@@ -23,7 +23,7 @@ void mandel_basic(pixel *dest,
     for ( iy = 0; iy < ypx; iy++ ) {
         for ( ix = offset; ix < xpx; ix += step ) {
             c.real      = xmin + ix * dx;
-            c.imaginary = ymin + iy * dy;
+            c.imaginary = ymax - iy * dy;
             original.real = c.real;
             original.imaginary = c.imaginary;
             ni = 0;

@@ -1,4 +1,4 @@
-CFLAGS=-O2
+CFLAGS=-g
 GTK_CFLAGS=
 
 cli:

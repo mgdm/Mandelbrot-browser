@@ -15,6 +15,7 @@
         <child>
           <object class="GtkEventBox" id="event_box">
             <property name="visible">True</property>
+            <signal name="motion_notify_event" handler="motion_event"/>
             <child>
               <placeholder/>
             </child>
@@ -37,6 +38,17 @@
             <property name="expand">False</property>
             <property name="fill">False</property>
             <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStatusbar" id="status_bar">
+            <property name="visible">True</property>
+            <property name="spacing">2</property>
+            <property name="has_resize_grip">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">2</property>
           </packing>
         </child>
       </object>
