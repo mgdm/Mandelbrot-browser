@@ -7,7 +7,7 @@
 
 pixel *buffer = NULL;
 double xmin = -2.0, xmax = 2.0;
-double ymin = 0.0, ymax = 4.0;
+double ymin = -2.0, ymax = 2.0;
 double cached_xmin, cached_xmax, cached_ymin, cached_ymax;
 double dx, dy;
 
