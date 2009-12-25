@@ -46,6 +46,10 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="invisible_char">&#x2022;</property>
+                    <property name="adjustment">x_adjustment</property>
+                    <property name="digits">3</property>
+                    <property name="numeric">True</property>
+                    <signal name="value_changed" handler="x_spin_changed"/>
                   </object>
                   <packing>
                     <property name="position">1</property>
@@ -65,6 +69,10 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="invisible_char">&#x2022;</property>
+                    <property name="adjustment">y_adjustment</property>
+                    <property name="digits">3</property>
+                    <property name="numeric">True</property>
+                    <signal name="value_changed" handler="y_spin_changed"/>
                   </object>
                   <packing>
                     <property name="position">3</property>
@@ -88,10 +96,14 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkSpinButton" id="spinbutton1">
+                  <object class="GtkSpinButton" id="width_spin">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="invisible_char">&#x2022;</property>
+                    <property name="adjustment">width_adjustment</property>
+                    <property name="digits">3</property>
+                    <property name="numeric">True</property>
+                    <signal name="value_changed" handler="width_spin_changed"/>
                   </object>
                   <packing>
                     <property name="position">1</property>
@@ -120,7 +132,7 @@
             </child>
           </object>
           <packing>
-            <property name="position">2</property>
+            <property name="position">1</property>
           </packing>
         </child>
         <child>
@@ -139,4 +151,28 @@
   </object>
   <object class="GtkAction" id="action1"/>
   <object class="GtkActionGroup" id="actiongroup1"/>
+  <object class="GtkAdjustment" id="x_adjustment">
+    <property name="lower">-100</property>
+    <property name="upper">100</property>
+    <property name="step_increment">0.01</property>
+    <property name="page_increment">10</property>
+    <property name="page_size">10</property>
+  </object>
+  <object class="GtkAdjustment" id="y_adjustment">
+    <property name="lower">-100</property>
+    <property name="upper">100</property>
+    <property name="step_increment">0.01</property>
+    <property name="page_increment">10</property>
+    <property name="page_size">10</property>
+  </object>
+  <object class="GtkAdjustment" id="width_adjustment">
+    <property name="upper">100</property>
+    <property name="step_increment">0.01</property>
+    <property name="page_increment">10</property>
+    <property name="page_size">10</property>
+  </object>
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="stock">gtk-save-as</property>
+  </object>
 </interface>
